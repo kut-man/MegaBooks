@@ -21,14 +21,14 @@ book_photos = ['https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/
                'https://images-na.ssl-images-amazon.com/images/I/71eAXvgIrFL.jpg',
                'https://images-na.ssl-images-amazon.com/images/I/81djg0KWthS.jpg']
 
-pdf_links = ['https://github.com/kut_man/Pong_Final_JavaFX/files/6573828/Carrie.Stephen_King.pdf',
+pdf_links = ['https://github.com/kut-man/MegaBooks/files/10951670/King.Stephen.-.Carrie.pdf',
              'https://github.com/kut_man/Pong_Final_JavaFX/files/6573830/IT.Stephen.King.pdf',
              'https://github.com/kut_man/Pong_Final_JavaFX/files/6573827/Bird.Box.pdf',
              'https://github.com/kut_man/Pong_Final_JavaFX/files/6573825/The.Help.Kathryn.Stockett.pdf',
              'https://github.com/kut_man/Pong_Final_JavaFX/files/6573824/One.Hundred.Years.Of.Solitude.pdf',
              'https://github.com/kut_man/Pong_Final_JavaFX/files/6573823/Memoirs.of.a.Geisha.pdf',
              'https://github.com/kut_man/Pong_Final_JavaFX/files/6573839/21.XXI.pdf',
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573840/Homo.Deus.pdf',
+             'https://github.com/kut-man/MegaBooks/files/10951682/Homo.Deus.by.z-lib.org.fb2.pdf',
              'https://github.com/kut_man/Pong_Final_JavaFX/files/6573842/Homo.Sapiens.pdf',
              'https://github.com/kut_man/Pong_Final_JavaFX/files/6573818/Harry.Potter.pdf,'
              'https://github.com/kut_man/Pong_Final_JavaFX/files/6573821/Robinson.Crusoe.pdf',
@@ -48,61 +48,13 @@ def catalog():
     return markup_reply_catalog
 
 
-def horror():
-    markup_reply_horror = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    book1 = types.KeyboardButton("Carrie")
-    book2 = types.KeyboardButton("IT")
-    book3 = types.KeyboardButton("Bird Box")
+def custom(number):
+    markup_reply = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    book1 = types.KeyboardButton(books[number])
+    book2 = types.KeyboardButton(books[number+1])
+    book3 = types.KeyboardButton(books[number+2])
     book_back = types.KeyboardButton("Back")
 
-    markup_reply_horror.add(book1, book2, book3, book_back)
+    markup_reply.add(book1, book2, book3, book_back)
 
-    return markup_reply_horror
-
-
-def historical():
-    markup_reply_historical = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    book4 = types.KeyboardButton("The Help")
-    book5 = types.KeyboardButton("One Hundred Years of Solitude")
-    book6 = types.KeyboardButton("Memoirs of a Geisha")
-    book_back = types.KeyboardButton("Back")
-
-    markup_reply_historical.add(book4, book5, book6, book_back)
-
-    return markup_reply_historical
-
-
-def russian():
-    markup_reply_russian = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    book7 = types.KeyboardButton("21 урок для XXI века")
-    book8 = types.KeyboardButton("Homo Deus")
-    book9 = types.KeyboardButton("Sapiens")
-    book_back = types.KeyboardButton("Back")
-
-    markup_reply_russian.add(book7, book8, book9, book_back)
-
-    return markup_reply_russian
-
-
-def fantasy():
-    markup_reply_fantasy = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    book10 = types.KeyboardButton("Harry Potter")
-    book11 = types.KeyboardButton("Robinson Crusoe")
-    book12 = types.KeyboardButton("Fahrenheit_451")
-    book_back = types.KeyboardButton("Back")
-
-    markup_reply_fantasy.add(book10, book11, book12, book_back)
-
-    return markup_reply_fantasy
-
-
-def novels():
-    markup_reply_detective = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    book13 = types.KeyboardButton("Alice's Adventures in Wonderland")
-    book14 = types.KeyboardButton("Little Women")
-    book15 = types.KeyboardButton("The Great Gatsby")
-    book_back = types.KeyboardButton("Back")
-
-    markup_reply_detective.add(book13, book14, book15, book_back)
-
-    return markup_reply_detective
+    return markup_reply

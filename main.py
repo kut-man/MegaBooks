@@ -66,19 +66,19 @@ def handler(message):
         feedback_writer = True
     elif message.text == "Horror":
         current_menu = 3
-        bot.send_message(message.chat.id, "Horror", reply_markup=BooksList.horror())
+        bot.send_message(message.chat.id, "Horror", reply_markup=BooksList.custom(0))
     elif message.text == "Historical Fiction":
         current_menu = 3
-        bot.send_message(message.chat.id, "Historical Fiction", reply_markup=BooksList.historical())
+        bot.send_message(message.chat.id, "Historical Fiction", reply_markup=BooksList.custom(3))
     elif message.text == "In Russian language":
         current_menu = 3
-        bot.send_message(message.chat.id, "In Russian language", reply_markup=BooksList.russian())
+        bot.send_message(message.chat.id, "In Russian language", reply_markup=BooksList.custom(6))
     elif message.text == "Fantasy":
         current_menu = 3
-        bot.send_message(message.chat.id, "Fantasy", reply_markup=BooksList.fantasy())
+        bot.send_message(message.chat.id, "Fantasy", reply_markup=BooksList.custom(9))
     elif message.text == "Novels":
         current_menu = 3
-        bot.send_message(message.chat.id, "Novels", reply_markup=BooksList.novels())
+        bot.send_message(message.chat.id, "Novels", reply_markup=BooksList.custom(12))
     elif message.text == "All Catalog":
         current_menu = 3
         bot.send_message(message.chat.id, "All Books:", reply_markup=BooksList.catalog())
