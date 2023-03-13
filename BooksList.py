@@ -1,9 +1,29 @@
 from telebot import types
 
-books = ['Carrie', 'IT', 'Bird Box', 'The Help',
-         'One Hundred Years of Solitude', 'Memoirs of a Geisha', '21 урок для XXI века', 'Homo Deus', 'Sapiens',
-         'Harry Potter', 'Robinson Crusoe', 'Fahrenheit_451', "Alice's Adventures in Wonderland", 'Little Women',
-         'The Great Gatsby']
+books = {
+    "Carrie": 'https://github.com/kut-man/MegaBooks/files/10951957/Stephen.King.-.Carrie.pdf',
+    "IT": 'https://github.com/kut-man/MegaBooks/files/10951958/Stephen.King.-.It.pdf',
+    "Bird Box": 'https://github.com/kut-man/MegaBooks/files/10951949/Bird.Box.pdf',
+    "The Help": 'https://github.com/kut-man/MegaBooks/files/10951960/The.Help.pdf',
+    "One Hundred Years of Solitude": 'https://github.com/kut-man/MegaBooks/files/10951954/One.Hundred.Years.of.Solitude.pdf',
+    "Memoirs of a Geisha": 'https://github.com/kut-man/MegaBooks/files/10951953/Memoirs.of.a.Geisha.PDFDrive.pdf',
+    "21 урок для XXI века": 'https://github.com/kut-man/MegaBooks/files/10951947/21.XXI.pdf',
+    "Homo Deus": 'https://github.com/kut-man/MegaBooks/files/10951951/Homo.Deus.pdf',
+    "Sapiens": 'https://github.com/kut-man/MegaBooks/files/10951956/Sapiens.pdf',
+    "Harry Potter": '',
+    "Robinson Crusoe": 'https://github.com/kut-man/MegaBooks/files/10951955/robinson-crusoe.pdf',
+    "Fahrenheit_451": 'https://github.com/kut-man/MegaBooks/files/10951950/Fahrenheit_451.pdf',
+    "Alice's Adventures in Wonderland": 'https://github.com/kut-man/MegaBooks/files/10951948/Alice.s.Adventures.in.Wonderland.pdf',
+    "Little Women": 'https://github.com/kut-man/MegaBooks/files/10951952/LITTLE.WOMEN.pdf',
+    "The Great Gatsby": 'https://github.com/kut-man/MegaBooks/files/10951959/The.Great.Gatsby.pdf',
+    "Philosopher's Stone": 'https://github.com/kut-man/MegaBooks/files/10951940/01.Harry.Potter.and.the.Sorcerer.s.Stone.pdf',
+    "Chamber of Secrets": 'https://github.com/kut-man/MegaBooks/files/10951941/02.Harry.Potter.and.the.Chamber.of.Secrets.pdf',
+    "Prisoner of Azkaban": 'https://github.com/kut-man/MegaBooks/files/10951942/03.Harry.Potter.and.the.Prisoner.of.Azkaban.pdf',
+    "Goblet of Fire": 'https://github.com/kut-man/MegaBooks/files/10951943/4_harry_potter_and_the_goblet_of_fire.pdf',
+    "Order of the Phoenix": 'https://github.com/kut-man/MegaBooks/files/10951944/05.Harry.Potter.and.the.Order.of.the.Phoenix.pdf',
+    "Half-Blood Prince": 'https://github.com/kut-man/MegaBooks/files/10951945/06.Harry.Potter.and.the.Half-Blood.Prince.pdf',
+    "Deathly Hallows": 'https://github.com/kut-man/MegaBooks/files/10951946/07.Harry.Potter.and.the.Deathly.Hallows.pdf'
+}
 
 book_photos = ['https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1381972494l/6360296.jpg',
                'https://images-na.ssl-images-amazon.com/images/I/71dIjJTeOSL.jpg',
@@ -19,23 +39,14 @@ book_photos = ['https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/
                'https://images-na.ssl-images-amazon.com/images/I/71OFqSRFDgL.jpg',
                'https://blackwells.co.uk/jacket/l/9781447279990.jpg',
                'https://images-na.ssl-images-amazon.com/images/I/71eAXvgIrFL.jpg',
-               'https://images-na.ssl-images-amazon.com/images/I/81djg0KWthS.jpg']
-
-pdf_links = ['https://github.com/kut-man/MegaBooks/files/10951670/King.Stephen.-.Carrie.pdf',
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573830/IT.Stephen.King.pdf',
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573827/Bird.Box.pdf',
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573825/The.Help.Kathryn.Stockett.pdf',
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573824/One.Hundred.Years.Of.Solitude.pdf',
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573823/Memoirs.of.a.Geisha.pdf',
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573839/21.XXI.pdf',
-             'https://github.com/kut-man/MegaBooks/files/10951682/Homo.Deus.by.z-lib.org.fb2.pdf',
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573842/Homo.Sapiens.pdf',
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573818/Harry.Potter.pdf,'
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573821/Robinson.Crusoe.pdf',
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573803/Fahrenheit_451.pdf',
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573832/Alice.s.Adventures.in.Wonderland.pdf',
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573835/Little.Women.pdf',
-             'https://github.com/kut_man/Pong_Final_JavaFX/files/6573836/The.Great.Gatsby.pdf']
+               'https://images-na.ssl-images-amazon.com/images/I/81djg0KWthS.jpg',
+               'https://www.adazing.com/wp-content/uploads/2022/12/Harry-Potter-Book-Covers-Philosophers-Stone-us-2.jpg',
+               'https://www.adazing.com/wp-content/uploads/2022/12/Harry-Potter-Book-Covers-Chamber-of-Secrets-us-1.png',
+               'https://www.adazing.com/wp-content/uploads/2022/12/Harry-Potter-Book-Covers-Prisoner-of-Azkaban-us-1.png',
+               'https://www.adazing.com/wp-content/uploads/2022/12/Harry-Potter-Book-Covers-Goblet-of-Fire-us-1.png',
+               'https://www.adazing.com/wp-content/uploads/2022/12/Harry-Potter-Book-Covers-Order-of-the-Phoenix-us-1.png',
+               'https://www.adazing.com/wp-content/uploads/2022/12/Harry-Potter-Book-Covers-Half-Blood-Prince-us-1.png',
+               'https://www.adazing.com/wp-content/uploads/2022/12/Harry-Potter-Book-Covers-Deathly-Hallows-us-1-768x1154.png']
 
 
 def catalog():
@@ -48,11 +59,21 @@ def catalog():
     return markup_reply_catalog
 
 
+def harry():
+    markup_reply_catalog = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    for k in range(15, 22):
+        book = types.KeyboardButton(list(books.keys())[k])
+        markup_reply_catalog.add(book)
+    book_back = types.KeyboardButton("Back")
+    markup_reply_catalog.add(book_back)
+    return markup_reply_catalog
+
+
 def custom(number):
     markup_reply = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    book1 = types.KeyboardButton(books[number])
-    book2 = types.KeyboardButton(books[number+1])
-    book3 = types.KeyboardButton(books[number+2])
+    book1 = types.KeyboardButton(list(books.keys())[number])
+    book2 = types.KeyboardButton(list(books.keys())[number+1])
+    book3 = types.KeyboardButton(list(books.keys())[number+2])
     book_back = types.KeyboardButton("Back")
 
     markup_reply.add(book1, book2, book3, book_back)

@@ -82,6 +82,9 @@ def handler(message):
     elif message.text == "All Catalog":
         current_menu = 3
         bot.send_message(message.chat.id, "All Books:", reply_markup=BooksList.catalog())
+    elif message.text == "Harry Potter":
+        current_menu = 4
+        bot.send_message(message.chat.id, "Harry Potter:", reply_markup=BooksList.harry())
     elif message.text == "Back":
         if current_menu == 2:
             bot.send_message(message.chat.id, "Back", reply_markup=main_menu())
@@ -93,8 +96,8 @@ def handler(message):
         inline_markup = types.InlineKeyboardMarkup()
         open_link1 = types.InlineKeyboardButton(text="Yes", callback_data="buy_yes")
         inline_markup.add(open_link1)
-        BooksList.books.index(message.text)
-        bot.send_photo(message.chat.id, BooksList.book_photos[BooksList.books.index(message.text)])
+        index = list(BooksList.books).index(message.text)
+        bot.send_photo(message.chat.id, BooksList.book_photos[index])
         bot.send_message(message.chat.id, text="Are you want to read?", reply_markup=inline_markup)
     elif message.text == "Feedbacks":
         with open("feedback.txt", "r", encoding="utf-8") as file:
