@@ -34,7 +34,7 @@ book_photos = ['https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/
                'https://s1.livelib.ru/boocover/1003030762/o/137a/Yuval_Noj_Harari__21_urok_dlya_XXI_veka.jpeg',
                'https://www.rahvaraamat.ee/images/products/001/165/891/thumbnails/big/52636cf87b3d630540e342493c0e51876fa30dca/homo-deus-%D0%BA%D1%80%D0%B0%D1%82%D0%BA%D0%B0%D1%8F-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%B1%D1%83%D0%B4%D1%83%D1%89%D0%B5%D0%B3%D0%BE.jpg',
                'https://img-gorod.ru/26/022/2602293_detail.jpg',
-               'https://kbimages1-a.akamaihd.net/5214c13c-52c9-4d8e-b50e-d8848657ce93/1200/1200/False/harry-potter-the-complete-collection-1-7-1.jpg',
+               '',  # harry potter is not a book it is a collection of books.
                'https://m.media-amazon.com/images/I/51PxDr7bKxL._SL_300_.jpg',
                'https://images-na.ssl-images-amazon.com/images/I/71OFqSRFDgL.jpg',
                'https://blackwells.co.uk/jacket/l/9781447279990.jpg',

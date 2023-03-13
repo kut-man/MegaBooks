@@ -60,7 +60,7 @@ def handler(message):
         bot.send_message(message.chat.id, text="Choose a type:", reply_markup=books())
     elif message.text == "Our Instagram":
         markup_inline = types.InlineKeyboardMarkup()
-        open_link = types.InlineKeyboardButton(text="megabooks_kg", url="https://www.instagram.com/megabooks_kg/")
+        open_link = types.InlineKeyboardButton(text="megabookskg", url="https://www.instagram.com/megabookskg/")
         markup_inline.add(open_link)
         bot.send_message(message.chat.id, "⬇️Our Instagram Page \U0001F4F7", reply_markup=markup_inline)
         feedback_writer = True
@@ -121,7 +121,7 @@ def handler(message):
 def callback_inline(call):
     global last_message
     if call.data == "buy_yes":
-        bot.send_document(call.message.chat.id, BooksList.pdf_links[BooksList.books.index(last_message)])
+        bot.send_document(call.message.chat.id, BooksList.books[last_message])
         bot.send_message(call.message.chat.id, "If everything is OK, please send Feedback about your experience!")
         bot.answer_callback_query(callback_query_id=call.id, show_alert=True,
                                   text="If everything is OK, please send Feedback about your experience!")
