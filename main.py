@@ -66,25 +66,25 @@ def handler(message):
         feedback_writer = True
     elif message.text == "Horror":
         current_menu = 3
-        bot.send_message(message.chat.id, "Horror", reply_markup=BooksList.custom(0))
+        bot.send_message(message.chat.id, "Horror", reply_markup=BooksList.catalog(0, 3))
     elif message.text == "Historical Fiction":
         current_menu = 3
-        bot.send_message(message.chat.id, "Historical Fiction", reply_markup=BooksList.custom(3))
+        bot.send_message(message.chat.id, "Historical Fiction", reply_markup=BooksList.catalog(3, 6))
     elif message.text == "In Russian language":
         current_menu = 3
-        bot.send_message(message.chat.id, "In Russian language", reply_markup=BooksList.custom(6))
+        bot.send_message(message.chat.id, "In Russian language", reply_markup=BooksList.catalog(6, 9))
     elif message.text == "Fantasy":
         current_menu = 3
-        bot.send_message(message.chat.id, "Fantasy", reply_markup=BooksList.custom(9))
+        bot.send_message(message.chat.id, "Fantasy", reply_markup=BooksList.catalog(9, 12))
     elif message.text == "Novels":
         current_menu = 3
-        bot.send_message(message.chat.id, "Novels", reply_markup=BooksList.custom(12))
+        bot.send_message(message.chat.id, "Novels", reply_markup=BooksList.catalog(12, 15))
     elif message.text == "All Catalog":
         current_menu = 3
-        bot.send_message(message.chat.id, "All Books:", reply_markup=BooksList.catalog())
+        bot.send_message(message.chat.id, "All Books:", reply_markup=BooksList.catalog(0, 20))
     elif message.text == "Harry Potter":
         current_menu = 4
-        bot.send_message(message.chat.id, "Harry Potter:", reply_markup=BooksList.harry())
+        bot.send_message(message.chat.id, "Harry Potter:", reply_markup=BooksList.catalog(0, 20))
     elif message.text == "Back":
         if current_menu == 2:
             bot.send_message(message.chat.id, "Back", reply_markup=main_menu())
@@ -96,8 +96,7 @@ def handler(message):
         inline_markup = types.InlineKeyboardMarkup()
         open_link1 = types.InlineKeyboardButton(text="Yes", callback_data="buy_yes")
         inline_markup.add(open_link1)
-        index = list(BooksList.books).index(message.text)
-        bot.send_photo(message.chat.id, BooksList.book_photos[index])
+        bot.send_photo(message.chat.id, BooksList.books[message.text][1])
         bot.send_message(message.chat.id, text="Are you want to read?", reply_markup=inline_markup)
     elif message.text == "Feedbacks":
         with open("feedback.txt", "r", encoding="utf-8") as file:
@@ -121,7 +120,7 @@ def handler(message):
 def callback_inline(call):
     global last_message
     if call.data == "buy_yes":
-        bot.send_document(call.message.chat.id, BooksList.books[last_message])
+        bot.send_document(call.message.chat.id, BooksList.books[last_message][0])
         bot.send_message(call.message.chat.id, "If everything is OK, please send Feedback about your experience!")
         bot.answer_callback_query(callback_query_id=call.id, show_alert=True,
                                   text="If everything is OK, please send Feedback about your experience!")
