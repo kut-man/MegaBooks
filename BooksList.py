@@ -19,7 +19,7 @@ books = {
 
     "One Hundred Years of Solitude": [
         'https://github.com/kut-man/MegaBooks/files/10951954/One.Hundred.Years.of.Solitude.pdf',
-        'https://lh3.googleusercontent.com/proxy/42zPU7rKI4713e8-bz8vu6VCRat_Un78ZF6XK1S2x1RNKK-3I-evjzPj9BJ9vd-xakna2c7KoS02ey-IMekSyGuaAOqYkrIukXMSihaRTzB2uxP7dgmjy76s1ff4mDtDMHQyPStNTkJV1v_5n_gp1Ml0Cv3yK5AsDdfl6Xl7o6w'],
+        'https://m.media-amazon.com/images/I/81MI6+TpYkL._AC_UF1000,1000_QL80_.jpg'],
 
     "Memoirs of a Geisha": [
         'https://github.com/kut-man/MegaBooks/files/10951953/Memoirs.of.a.Geisha.PDFDrive.pdf',
@@ -29,7 +29,7 @@ books = {
         'https://s1.livelib.ru/boocover/1003030762/o/137a/Yuval_Noj_Harari__21_urok_dlya_XXI_veka.jpeg'],
     "Homo Deus": [
         'https://github.com/kut-man/MegaBooks/files/10951951/Homo.Deus.pdf',
-        'https://www.rahvaraamat.ee/images/products/001/165/891/thumbnails/big/52636cf87b3d630540e342493c0e51876fa30dca/homo-deus-%D0%BA%D1%80%D0%B0%D1%82%D0%BA%D0%B0%D1%8F-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%B1%D1%83%D0%B4%D1%83%D1%89%D0%B5%D0%B3%D0%BE.jpg'],
+        'https://cv3.litres.ru/pub/c/cover_max1500/36300631.jpg'],
     "Sapiens": [
         'https://github.com/kut-man/MegaBooks/files/10951956/Sapiens.pdf',
         'https://img-gorod.ru/26/022/2602293_detail.jpg'],
@@ -71,7 +71,6 @@ books = {
         'https://github.com/kut-man/MegaBooks/files/10951946/07.Harry.Potter.and.the.Deathly.Hallows.pdf',
         'https://www.adazing.com/wp-content/uploads/2022/12/Harry-Potter-Book-Covers-Deathly-Hallows-us-1-768x1154.png']
 }
-
 
 
 def catalog(start, end):
