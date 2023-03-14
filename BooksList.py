@@ -73,33 +73,11 @@ books = {
 }
 
 
-def catalog():
+def catalog(start, end):
     markup_reply_catalog = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    for k in books:
-        book1 = types.KeyboardButton(k)
-        markup_reply_catalog.add(book1)
-    book_back = types.KeyboardButton("Back")
-    markup_reply_catalog.add(book_back)
-    return markup_reply_catalog
-
-
-def harry():
-    markup_reply_catalog = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    for k in range(15, 22):
+    for k in range(start, end):
         book = types.KeyboardButton(list(books.keys())[k])
         markup_reply_catalog.add(book)
     book_back = types.KeyboardButton("Back")
     markup_reply_catalog.add(book_back)
     return markup_reply_catalog
-
-
-def custom(number):
-    markup_reply = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    book1 = types.KeyboardButton(list(books.keys())[number])
-    book2 = types.KeyboardButton(list(books.keys())[number+1])
-    book3 = types.KeyboardButton(list(books.keys())[number+2])
-    book_back = types.KeyboardButton("Back")
-
-    markup_reply.add(book1, book2, book3, book_back)
-
-    return markup_reply
