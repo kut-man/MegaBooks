@@ -81,10 +81,10 @@ def handler(message):
         bot.send_message(message.chat.id, "Novels", reply_markup=BooksList.catalog(12, 15))
     elif message.text == "All Catalog":
         current_menu = 3
-        bot.send_message(message.chat.id, "All Books:", reply_markup=BooksList.catalog(0, 20))
+        bot.send_message(message.chat.id, "All Books:", reply_markup=BooksList.catalog(0, 22))
     elif message.text == "Harry Potter":
         current_menu = 4
-        bot.send_message(message.chat.id, "Harry Potter:", reply_markup=BooksList.catalog(0, 20))
+        bot.send_message(message.chat.id, "Harry Potter:", reply_markup=BooksList.catalog(15, 22))
     elif message.text == "Back":
         if current_menu == 2:
             bot.send_message(message.chat.id, "Back", reply_markup=main_menu())
