@@ -97,7 +97,7 @@ def handler(message):
         open_link1 = types.InlineKeyboardButton(text="Yes", callback_data="buy_yes")
         inline_markup.add(open_link1)
         bot.send_photo(message.chat.id, BooksList.books[message.text][1])
-        bot.send_message(message.chat.id, text="Are you want to read?", reply_markup=inline_markup)
+        bot.send_message(message.chat.id, text="Do you want to read?", reply_markup=inline_markup)
     elif message.text == "Feedbacks":
         with open("feedback.txt", "r", encoding="utf-8") as file:
             bot.send_message(message.chat.id, file.read())
